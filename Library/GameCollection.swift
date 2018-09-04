@@ -10,6 +10,11 @@ import Foundation
 
 struct GameCollection {
     
-    var gameCollection: [String : String] = [:]
+    var gameCollection = [
+        
+        "The Witcher 3" : "xbox",
+        "The Last of Us" : "ps4",
+        "Hearthstone" : "pc"
+    ]
     
 }
