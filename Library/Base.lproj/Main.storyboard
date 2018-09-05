@@ -21,7 +21,7 @@
                         <color key="backgroundColor" red="0.21960784310000001" green="0.37254901959999998" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="separatorColor" red="0.16862745100000001" green="0.25490196079999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameCell" rowHeight="200" id="JXT-zp-Dx2" customClass="GameCell" customModule="Library" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameCell" rowHeight="200" id="JXT-zp-Dx2" customClass="GameCell" customModule="Library" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JXT-zp-Dx2" id="Fzo-oW-YvK">
@@ -71,12 +71,51 @@
                     <navigationItem key="navigationItem" title="Games" id="vmM-8c-M7Z">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="7hD-xJ-Uo8">
                             <color key="tintColor" red="0.96078431372549022" green="0.94117647058823528" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="NtN-QT-CrF" kind="show" identifier="AddItem" id="xef-vB-FPq"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Re-DZ-B5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2010.4000000000001" y="107.88177339901478"/>
+        </scene>
+        <!--Add Game-->
+        <scene sceneID="CnW-Xl-waZ">
+            <objects>
+                <tableViewController id="NtN-QT-CrF" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wZO-5n-xJD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="c5R-cF-eyr">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c5R-cF-eyr" id="03n-MW-T7r">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NtN-QT-CrF" id="oFU-bz-byN"/>
+                            <outlet property="delegate" destination="NtN-QT-CrF" id="Xt8-g6-oNo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Game" largeTitleDisplayMode="never" id="XNy-V7-Bdy">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="bwG-ze-tVJ">
+                            <color key="tintColor" red="0.96078431369999995" green="0.94117647059999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Ehu-xO-WLr">
+                            <color key="tintColor" red="0.96078431369999995" green="0.94117647059999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pga-ks-Brg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2983" y="108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8C1-5w-U2S">
