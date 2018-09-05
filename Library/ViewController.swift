@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, AddGameViewControllerDelegate {
     
     var games: [Game] = []
     let gc = GameCollection()
@@ -48,6 +48,29 @@ class ViewController: UITableViewController {
     func swipeToDelete(indexPath: IndexPath) {
         games.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.bottom)
+    }
+    
+    func addGameViewControllerDidCancel(_ controller: AddGameViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addGameViewController(_ controller: AddGameViewController, didFinishAdding item: Game) {
+        
+        let newRowIndex = games.count
+        games.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddGame" {
+            let controller = segue.destination as! AddGameViewController
+            controller.delegate = self
+        }
     }
     
 }

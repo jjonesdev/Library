@@ -24,6 +24,8 @@ class AddGameViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gameName.becomeFirstResponder()
 
     }
 
@@ -44,4 +46,5 @@ class AddGameViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         return nil
     }
+    
 }
