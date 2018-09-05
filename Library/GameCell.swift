@@ -10,6 +10,13 @@ import UIKit
 
 class GameCell: UITableViewCell {
 
-
+    @IBOutlet weak var gameLabel: UILabel!
+    @IBOutlet weak var platformLabel: UILabel!
+    
+    
+    func setLabels(setGame: Game ) {
+        gameLabel.text = setGame.name
+        platformLabel.text = setGame.platform
+    }
 
 }

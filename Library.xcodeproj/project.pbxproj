@@ -13,7 +13,6 @@
 		17B165F9213F1EAB00A1B45F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B165F8213F1EAB00A1B45F /* Assets.xcassets */; };
 		17B165FC213F1EAB00A1B45F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B165FA213F1EAB00A1B45F /* LaunchScreen.storyboard */; };
 		17B16604213F200D00A1B45F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16603213F200D00A1B45F /* Game.swift */; };
-		17B16606213F20C100A1B45F /* GameCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16605213F20C100A1B45F /* GameCollection.swift */; };
 		17B16608213F253500A1B45F /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16607213F253500A1B45F /* GameCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		17B165FB213F1EAB00A1B45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17B165FD213F1EAB00A1B45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B16603213F200D00A1B45F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		17B16605213F20C100A1B45F /* GameCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollection.swift; sourceTree = "<group>"; };
 		17B16607213F253500A1B45F /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,9 +60,8 @@
 			children = (
 				17B165F1213F1EAA00A1B45F /* AppDelegate.swift */,
 				17B165F3213F1EAA00A1B45F /* ViewController.swift */,
-				17B16607213F253500A1B45F /* GameCell.swift */,
 				17B16603213F200D00A1B45F /* Game.swift */,
-				17B16605213F20C100A1B45F /* GameCollection.swift */,
+				17B16607213F253500A1B45F /* GameCell.swift */,
 				17B165F5213F1EAA00A1B45F /* Main.storyboard */,
 				17B165F8213F1EAB00A1B45F /* Assets.xcassets */,
 				17B165FA213F1EAB00A1B45F /* LaunchScreen.storyboard */,
@@ -146,7 +143,6 @@
 			files = (
 				17B16608213F253500A1B45F /* GameCell.swift in Sources */,
 				17B165F4213F1EAA00A1B45F /* ViewController.swift in Sources */,
-				17B16606213F20C100A1B45F /* GameCollection.swift in Sources */,
 				17B16604213F200D00A1B45F /* Game.swift in Sources */,
 				17B165F2213F1EAA00A1B45F /* AppDelegate.swift in Sources */,
 			);

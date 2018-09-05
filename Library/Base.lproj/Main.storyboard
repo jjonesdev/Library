@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,20 +15,54 @@
         <scene sceneID="VvE-wf-dEr">
             <objects>
                 <tableViewController id="pyF-Sy-AvF" customClass="ViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qQG-gK-mrc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qQG-gK-mrc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LAx-r2-hgo">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameCell" rowHeight="200" id="JXT-zp-Dx2" customClass="GameCell" customModule="Library" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LAx-r2-hgo" id="G6J-8C-rbr">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JXT-zp-Dx2" id="Fzo-oW-YvK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62D-SD-hzc">
+                                            <rect key="frame" x="121" y="91" width="133" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="OhQ-Ol-2Wm"/>
+                                                <constraint firstAttribute="width" constant="133" id="YAL-Qo-dcf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-du-EGF">
+                                            <rect key="frame" x="121" y="62" width="125" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="3UN-H9-Q9C"/>
+                                                <constraint firstAttribute="width" constant="125" id="JwU-TB-l90"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fIN-du-EGF" firstAttribute="top" secondItem="Fzo-oW-YvK" secondAttribute="topMargin" constant="51" id="3EF-43-E37"/>
+                                        <constraint firstItem="62D-SD-hzc" firstAttribute="top" secondItem="fIN-du-EGF" secondAttribute="bottom" constant="8" id="8MD-sF-jgU"/>
+                                        <constraint firstItem="62D-SD-hzc" firstAttribute="top" secondItem="fIN-du-EGF" secondAttribute="bottom" constant="8" id="MKY-7P-k5J"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="62D-SD-hzc" secondAttribute="bottom" constant="77" id="uSs-TQ-AkU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <viewLayoutGuide key="safeArea" id="RcE-fc-Giw"/>
+                                <connections>
+                                    <outlet property="gameLabel" destination="fIN-du-EGF" id="z6m-mA-krd"/>
+                                    <outlet property="platformLabel" destination="62D-SD-hzc" id="KDK-Ly-WVm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="pyF-Sy-AvF" id="UJM-Oy-B18"/>
                             <outlet property="delegate" destination="pyF-Sy-AvF" id="nvT-wk-4z4"/>
@@ -36,7 +72,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Re-DZ-B5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="123.68815592203899"/>
+            <point key="canvasLocation" x="1068" y="107.88177339901478"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d0V-Pq-XUi">
