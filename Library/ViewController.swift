@@ -17,7 +17,7 @@ class ViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         games = constructGameCollection()
-        print(games)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,6 +38,17 @@ class ViewController: UITableViewController {
         cell.setLabels(setGame: game)
         return cell
         
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            swipeToDelete(indexPath: indexPath)
+        }
+    }
+    
+    func swipeToDelete(indexPath: IndexPath) {
+        games.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.bottom)
     }
     
     
