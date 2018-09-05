@@ -49,5 +49,6 @@ class ViewController: UITableViewController {
         games.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.bottom)
     }
+    
 }
 

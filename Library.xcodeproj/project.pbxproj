@@ -15,6 +15,7 @@
 		17B16604213F200D00A1B45F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16603213F200D00A1B45F /* Game.swift */; };
 		17B16608213F253500A1B45F /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16607213F253500A1B45F /* GameCell.swift */; };
 		17B1660A214001D500A1B45F /* GameCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B16609214001D500A1B45F /* GameCollection.swift */; };
+		17B1660C2140093000A1B45F /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B1660B2140093000A1B45F /* AddGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		17B16603213F200D00A1B45F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		17B16607213F253500A1B45F /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		17B16609214001D500A1B45F /* GameCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollection.swift; sourceTree = "<group>"; };
+		17B1660B2140093000A1B45F /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				17B165F1213F1EAA00A1B45F /* AppDelegate.swift */,
 				17B165F3213F1EAA00A1B45F /* ViewController.swift */,
+				17B1660B2140093000A1B45F /* AddGameViewController.swift */,
 				17B16607213F253500A1B45F /* GameCell.swift */,
 				17B16603213F200D00A1B45F /* Game.swift */,
 				17B16609214001D500A1B45F /* GameCollection.swift */,
@@ -146,6 +149,7 @@
 			files = (
 				17B16608213F253500A1B45F /* GameCell.swift in Sources */,
 				17B165F4213F1EAA00A1B45F /* ViewController.swift in Sources */,
+				17B1660C2140093000A1B45F /* AddGameViewController.swift in Sources */,
 				17B1660A214001D500A1B45F /* GameCollection.swift in Sources */,
 				17B16604213F200D00A1B45F /* Game.swift in Sources */,
 				17B165F2213F1EAA00A1B45F /* AppDelegate.swift in Sources */,
