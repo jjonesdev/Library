@@ -11,18 +11,18 @@ import UIKit
 class ViewController: UITableViewController {
     
     var games: [Game] = []
+    let gc = GameCollection()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        games = constructGameCollection()
+                
+        games = gc.constructGameCollection()
+        navigationController?.navigationBar.prefersLargeTitles = true
 
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,17 +30,16 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let game = games[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath) as! GameCell
         
-
         cell.setLabels(setGame: game)
         return cell
         
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+       
         if editingStyle == UITableViewCellEditingStyle.delete {
             swipeToDelete(indexPath: indexPath)
         }
@@ -50,25 +49,5 @@ class ViewController: UITableViewController {
         games.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.bottom)
     }
-    
-    
-    func constructGameCollection() -> [Game] {
-        
-        var tempGames: [Game] = []
-        
-        let gameOne = Game(name: "The Witcher 3", platform: "xbox")
-        let gameTwo = Game(name: "The Last of Us", platform: "ps4")
-        let gameThree = Game(name: "Hearthstone", platform: "pc")
-        let gameFour = Game(name: "Starcraft 2", platform: "pc")
-        
-        tempGames.append(gameOne)
-        tempGames.append(gameTwo)
-        tempGames.append(gameThree)
-        tempGames.append(gameFour)
-        
-        return tempGames
-        
-    }
-    
 }
 

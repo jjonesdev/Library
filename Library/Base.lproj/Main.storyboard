@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Games-->
         <scene sceneID="VvE-wf-dEr">
             <objects>
                 <tableViewController id="pyF-Sy-AvF" customClass="ViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                         <color key="backgroundColor" red="0.21960784310000001" green="0.37254901959999998" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="separatorColor" red="0.16862745100000001" green="0.25490196079999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameCell" rowHeight="200" id="JXT-zp-Dx2" customClass="GameCell" customModule="Library" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameCell" rowHeight="200" id="JXT-zp-Dx2" customClass="GameCell" customModule="Library" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JXT-zp-Dx2" id="Fzo-oW-YvK">
@@ -68,7 +68,7 @@
                             <outlet property="delegate" destination="pyF-Sy-AvF" id="nvT-wk-4z4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vmM-8c-M7Z">
+                    <navigationItem key="navigationItem" title="Games" id="vmM-8c-M7Z">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="7hD-xJ-Uo8">
                             <color key="tintColor" red="0.96078431372549022" green="0.94117647058823528" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
@@ -87,6 +87,12 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.16862745100000001" green="0.25490196079999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96078431369999995" green="0.94117647059999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.96078431369999995" green="0.94117647059999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
