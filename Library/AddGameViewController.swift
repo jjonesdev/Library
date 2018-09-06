@@ -13,6 +13,8 @@ protocol AddGameViewControllerDelegate: class {
     func addGameViewControllerDidCancel(_ controller: AddGameViewController)
     
     func addGameViewController(_ controller: AddGameViewController, didFinishAdding item: Game)
+    
+    
 }
 
 class AddGameViewController: UITableViewController {
@@ -39,12 +41,28 @@ class AddGameViewController: UITableViewController {
     }
     
     @IBAction func done(_ sender: UIBarButtonItem) {
-        let game = Game(name: gameName.text! , platform: platformName.text!)
+        
+        let platformString = unwrappedTextField(input: platformName.text)
+        let gameString = unwrappedTextField(input: gameName.text)
+        
+        let game = Game(name: gameString , platform: platformString)
         delegate?.addGameViewController(self, didFinishAdding: game)
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         return nil
     }
+    
+    
+    func unwrappedTextField(input: String? ) -> String {
+        guard let unwrapped = input else {
+            return "No value"
+        }
+        let unwrappedString = unwrapped
+    
+        return unwrappedString
+    }
+    
+
     
 }

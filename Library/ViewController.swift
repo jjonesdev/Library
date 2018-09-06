@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UITableViewController, AddGameViewControllerDelegate {
     
     var games: [Game] = []
-    let gc = GameCollection()
+    let gameCollection = GameCollection()
     
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        games = gc.constructGameCollection()
+        games = gameCollection.constructGameCollection()
         navigationController?.navigationBar.prefersLargeTitles = true
 
     }
