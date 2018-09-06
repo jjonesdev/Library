@@ -14,7 +14,6 @@ protocol AddGameViewControllerDelegate: class {
     
     func addGameViewController(_ controller: AddGameViewController, didFinishAdding item: Game)
     
-    
 }
 
 class AddGameViewController: UITableViewController {
@@ -22,18 +21,18 @@ class AddGameViewController: UITableViewController {
     @IBOutlet weak var gameName: UITextField!
     @IBOutlet weak var platformName: UITextField!
     weak var delegate: AddGameViewControllerDelegate?
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         gameName.becomeFirstResponder()
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
@@ -59,10 +58,8 @@ class AddGameViewController: UITableViewController {
             return "No value"
         }
         let unwrappedString = unwrapped
-    
+        
         return unwrappedString
     }
-    
-
     
 }

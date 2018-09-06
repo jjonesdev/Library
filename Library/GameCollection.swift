@@ -20,7 +20,5 @@ struct GameCollection {
         let tempGames = [gameOne, gameTwo, gameThree, gameFour]
         
         return tempGames
-        
     }
-    
 }

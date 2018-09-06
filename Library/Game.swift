@@ -9,8 +9,6 @@
 import Foundation
 
 struct Game {
-    
     var name: String
     var platform: String
-    
 }
