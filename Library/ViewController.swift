@@ -72,6 +72,6 @@ class ViewController: UITableViewController, AddGameViewControllerDelegate {
             controller.delegate = self
         }
     }
-    
+        
 }
 

@@ -183,6 +183,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="Ehu-xO-WLr" id="Nx6-Eq-Kuy"/>
                         <outlet property="gameName" destination="6CT-eh-3oe" id="Mcq-Sd-qsd"/>
                         <outlet property="platformName" destination="0Yh-ZY-RXV" id="t5Z-nF-VkN"/>
                     </connections>

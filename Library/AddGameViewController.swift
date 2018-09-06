@@ -20,13 +20,19 @@ class AddGameViewController: UITableViewController {
     
     @IBOutlet weak var gameName: UITextField!
     @IBOutlet weak var platformName: UITextField!
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     weak var delegate: AddGameViewControllerDelegate?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        gameName.addTarget(self, action: #selector(textFieldDidChange), for: UIControlEvents.editingChanged)
         gameName.becomeFirstResponder()
+        
+        if gameName.text!.isEmpty {
+            doneButton.isEnabled = false
+        }
         
     }
     
@@ -62,4 +68,12 @@ class AddGameViewController: UITableViewController {
         return unwrappedString
     }
     
+    @objc func textFieldDidChange(textField: UITextField) {
+        
+        if textField.text!.isEmpty {
+            doneButton.isEnabled = false
+        } else {
+            doneButton.isEnabled = true
+        }
+    }
 }
